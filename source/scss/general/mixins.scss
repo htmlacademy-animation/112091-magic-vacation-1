@@ -58,3 +58,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin fadeIn {
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+@mixin slideInLeft($duration: 0.3s) {
+  animation-name: slideInLeft;
+  animation-duration: $duration;
+}
+
+@mixin slideOutRight($duration: 0.3s) {
+  animation-name: slideOutRight;
+  animation-duration: $duration;
+}

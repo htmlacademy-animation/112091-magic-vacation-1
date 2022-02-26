@@ -22,5 +22,16 @@ export default () => {
         document.body.classList.remove(`menu-opened`);
       }
     });
+    menuLinks[i].addEventListener(`mouseout`, function (e) {
+      const link = e.target;
+      if (link.classList.contains(`active`) || window.innerWidth < 1025) {
+        return;
+      }
+
+      link.classList.add(`leaving`);
+      setTimeout(function () {
+        link.classList.remove(`leaving`);
+      }, 300);
+    });
   }
 };
